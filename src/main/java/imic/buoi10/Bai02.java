@@ -36,11 +36,56 @@ public class Bai02 {
         }
         return F;
     }
-    public static void snt(int a) {
-        int count = 0;
-        for (int i = 1; i <= Math.sqrt(a); i++){
-            if (a%i == 0){ count = count + 1;}
+    public static boolean snt(int a) {
+        for (int i = 2; i <= Math.sqrt(a); i++){
+            if (a%i == 0) return false;
         }
-
+        return true;
     }
+     public static void sntn(int n) {
+        boolean t;
+        for (int i = n - 1; i > 0 ; i--){
+            t = snt(i);
+            if (t == true) System.out.println(i);
+        }
+    }
+    public static void phanTich(int b) {
+        int count = 0;
+        int c = b;
+        int[] a = new int[b];
+        for (int i = 2; i <= c ; i++){
+            if (c%i == 0){ 
+                a[count] = i;
+                count++;
+                c = c/i;
+                i -= 1;
+            }
+        }
+        System.out.print(b + " = ");
+        for (int i = 0; i < count - 1; i++) System.out.print(a[i] + " x ");
+        System.out.print(a[count - 1]);
+    }
+    public static int tongChuSo(int a){
+        int tong = 0;
+        int t = 0;
+        while (a != 0){
+            t = a%10;
+            tong += t;
+            a = a/10;
+        }
+        return tong;
+    }
+    public static boolean soThuanNghich(int b) {
+        int soNghich = 0;
+        int i;
+        int a = b;
+        while (a != 0){
+            i = a % 10;
+            a = a/10;
+            soNghich = soNghich*10 + i;
+        }
+        if (b == soNghich) return true;
+        return false;
+	    }
+    
 }
