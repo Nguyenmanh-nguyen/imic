@@ -3,7 +3,7 @@ package imic.buoi10;
 import java.util.Scanner;
 
 public class Bai06 {
-
+//change something to push
     public static double getRamdomDouble(double min, double max){
         double x = (Math.random()*((max - min) + 1)) + min;
         return x;
