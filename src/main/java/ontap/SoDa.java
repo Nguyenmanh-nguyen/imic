@@ -1,4 +1,4 @@
-package javacore;
+package ontap;
 
 public class SoDa extends Douong2 {
     public SoDa() {

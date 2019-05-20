@@ -1,4 +1,4 @@
-package javacore;
+package ontap;
 
 public class Douong2 {
         char category;

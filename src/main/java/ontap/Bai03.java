@@ -1,4 +1,4 @@
-package javacore;
+package ontap;
 
 import java.util.Scanner;
 
